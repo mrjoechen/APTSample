@@ -76,8 +76,10 @@ class BuilderProcessor:AbstractProcessor(){
                     ?: Logger.error(element, "Field " + element + " annotated as Optional while " + element.enclosingElement + " not annotated."))
             }
 
-        activityClasses.forEach {
+        activityClasses.values.forEach {
             Logger.warn(it.toString())
+            it.builder.build(AptContext.filer)
+
         }
         return true
     }
