@@ -8,7 +8,6 @@ import javax.lang.model.element.Modifier
 
 class ConstantBuilder (private val activityClass: ActivityClass){
 
-
     //public static final String REQUIRED_NAME = "name";
     fun build(typeBuilder: TypeSpec.Builder){
         activityClass.fields.forEach {field ->

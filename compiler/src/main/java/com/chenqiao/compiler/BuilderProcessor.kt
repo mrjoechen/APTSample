@@ -13,7 +13,6 @@ import com.sun.tools.javac.code.Symbol
 import javax.annotation.processing.AbstractProcessor
 import javax.annotation.processing.ProcessingEnvironment
 import javax.annotation.processing.RoundEnvironment
-import javax.annotation.processing.SupportedAnnotationTypes
 import javax.lang.model.SourceVersion
 import javax.lang.model.element.TypeElement
 import javax.lang.model.element.Element
@@ -38,7 +37,6 @@ class BuilderProcessor:AbstractProcessor(){
         roundEnv: RoundEnvironment
     ): Boolean {
 
-
         val activityClasses = HashMap<Element, ActivityClass>()
 
 //        roundEnv.getElementsAnnotatedWith(Builder::class.java).forEach {
@@ -58,7 +56,6 @@ class BuilderProcessor:AbstractProcessor(){
                     Logger.logParsingError(element, Builder::class.java, e)
                 }
             }
-
 
         roundEnv.getElementsAnnotatedWith(Required::class.java)
             .filter { it.kind == ElementKind.FIELD }

@@ -11,7 +11,6 @@ import kotlinx.android.synthetic.main.activity_repository.*
 @Builder
 class RepositoryActivity : AppCompatActivity() {
 
-
     @Required
     lateinit var name: String
 
