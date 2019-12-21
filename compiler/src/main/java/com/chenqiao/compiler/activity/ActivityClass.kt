@@ -26,7 +26,7 @@ class ActivityClass(val typeElement: TypeElement){
     }
 
     companion object{
-        val META_DATA = Class.forName("kotlin.Metadata") as Class<Annotation>
+        val META_DATA = Class.forName("kotlin.Metadata")!! as Class<Annotation>
     }
 
 }
